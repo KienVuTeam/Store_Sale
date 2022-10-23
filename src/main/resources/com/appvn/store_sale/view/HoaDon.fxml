@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="593.0" prefWidth="921.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.appvn.store_sale.controller.HoaDonController">
+    <stylesheets>
+        <URL value="@/com/appvn/store_sale/css/hoadon.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="411.0" layoutY="28.0" text="Managment Of Bill" />
+      <Label layoutX="157.0" layoutY="96.0" text="Tên Hoá Đơn" />
+      <Label layoutX="154.0" layoutY="130.0" text="Tên Sản Phẩm" />
+      <Label layoutX="128.0" layoutY="288.0" text="Tổng Số Lượng Hàng" />
+      <Label layoutX="169.0" layoutY="166.0" text="Số Lượng" />
+      <Label layoutX="173.0" layoutY="192.0" text="Đơn Giá" />
+      <Label layoutX="165.0" layoutY="223.0" text="Thành Tiền" />
+      <Label layoutX="167.0" layoutY="256.0" text="Chiết Suất" />
+      <Label layoutX="153.0" layoutY="350.0" text="Mã Nhân Viên" />
+      <Label layoutX="149.0" layoutY="380.0" text="Mã Khách Hàng" />
+      <Label layoutX="162.0" layoutY="319.0" text="Tổng Cộng" />
+      <TextField fx:id="tfnamehd" layoutX="263.0" layoutY="92.0" prefHeight="26.0" prefWidth="266.0" />
+      <TextField fx:id="tfnamesp" layoutX="263.0" layoutY="126.0" prefHeight="26.0" prefWidth="266.0" />
+      <TextField fx:id="tfsoluong" layoutX="263.0" layoutY="158.0" prefHeight="26.0" prefWidth="266.0" />
+      <TextField fx:id="tfdongia" layoutX="263.0" layoutY="188.0" prefHeight="26.0" prefWidth="266.0" />
+      <TextField fx:id="tfchietsuat" layoutX="263.0" layoutY="252.0" prefHeight="26.0" prefWidth="266.0" />
+      <TextField fx:id="tftongsoluong" layoutX="264.0" layoutY="284.0" prefHeight="26.0" prefWidth="266.0" />
+      <TextField fx:id="tftongcong" layoutX="264.0" layoutY="315.0" prefHeight="26.0" prefWidth="218.0" />
+      <TextField fx:id="tfnhanvienid" layoutX="264.0" layoutY="346.0" />
+      <TextField fx:id="tfkhachhangid" layoutX="264.0" layoutY="376.0" />
+      <Button layoutX="588.0" layoutY="78.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="116.0" text="Thêm">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="747.0" layoutY="78.0" mnemonicParsing="false" onAction="#tinhtien" prefHeight="88.0" prefWidth="140.0" text="Tính Tiền">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="588.0" layoutY="230.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="116.0" text="Sửa">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="747.0" layoutY="228.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="116.0" text="In">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Button>
+      <TableView layoutX="7.0" layoutY="412.0" prefHeight="192.0" prefWidth="1124.0">
+        <columns>
+          <TableColumn fx:id="hdColumn" prefWidth="75.0" text="Mã HĐ" />
+          <TableColumn fx:id="namehdColumn" prefWidth="100.0" text="Tên HĐ" />
+            <TableColumn fx:id="namespColumn" prefWidth="86.40000915527344" text="Tên Sp" />
+            <TableColumn fx:id="soluongColumn" prefWidth="89.5999755859375" text="Số Lượng" />
+            <TableColumn fx:id="dongiaColumn" prefWidth="117.5999755859375" text="Đơn Giá" />
+            <TableColumn fx:id="thanhtienColumn" prefWidth="137.5999755859375" text="Thành Tiền" />
+            <TableColumn fx:id="chietsuatColumn" prefWidth="99.99993896484375" text="Chiết Suất" />
+            <TableColumn fx:id="tongsoluongColumn" prefWidth="78.39999389648438" text="Tổng Số Lượng Hàng" />
+            <TableColumn fx:id="tongcongColumn" prefWidth="164.00006103515625" text="Tổng Cộng" />
+            <TableColumn fx:id="nhanvienidColumn" prefWidth="94.4000244140625" text="Mã NV" />
+            <TableColumn fx:id="khachhangidColumn" prefWidth="87.9998779296875" text="Mã KH" />
+        </columns>
+      </TableView>
+      <Label fx:id="tfthanhtien1" layoutX="264.0" layoutY="223.0" prefHeight="18.0" prefWidth="163.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.appvn.store_sale.controller.ChucVuController">
+    <stylesheets>
+        <URL value="@/com/appvn/store_sale/css/chucvu.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="238.0" layoutY="25.0" text="Management ChucVu" />
+      <Label layoutX="83.0" layoutY="75.0" text="Mã Chức Vụ" />
+      <Label layoutX="82.0" layoutY="151.0" text="Tên Chức Vụ" />
+      <Label layoutX="78.0" layoutY="113.0" text="Mã Nhân Viên" />
+      <Label layoutX="95.0" layoutY="191.0" text="Ghi Chú" />
+      <Button layoutX="154.0" layoutY="230.0" mnemonicParsing="false" text="Thêm " />
+      <Button layoutX="270.0" layoutY="230.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="Xoá " />
+      <Button layoutX="386.0" layoutY="230.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="Sửa" />
+      <TableView layoutX="40.0" layoutY="266.0" prefHeight="174.0" prefWidth="512.0">
+        <columns>
+          <TableColumn prefWidth="94.4000244140625" text="Mã Chức Vụ" />
+          <TableColumn prefWidth="99.20001220703125" text="Mã Nhân Viên" />
+            <TableColumn prefWidth="147.99993896484375" text="Tên Chức Vụ" />
+            <TableColumn prefWidth="171.199951171875" text="Ghi Chú" />
+        </columns>
+      </TableView>
+      <TextField layoutX="196.0" layoutY="71.0" prefHeight="26.0" prefWidth="247.0" />
+      <TextField layoutX="197.0" layoutY="109.0" prefHeight="26.0" prefWidth="247.0" />
+      <MenuButton layoutX="197.0" layoutY="147.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="135.0">
+        <items>
+            <MenuItem mnemonicParsing="false" text="GIám đóc" />
+          <MenuItem mnemonicParsing="false" text="Quản Lý" />
+          <MenuItem mnemonicParsing="false" text="Nhân Viên" />
+            <MenuItem mnemonicParsing="false" text="Kế Toán" />
+        </items>
+      </MenuButton>
+      <TextField layoutX="198.0" layoutY="187.0" prefHeight="26.0" prefWidth="247.0" />
+   </children>
+</AnchorPane>

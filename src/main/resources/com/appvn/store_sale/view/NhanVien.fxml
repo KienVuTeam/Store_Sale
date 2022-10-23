@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="558.0" prefWidth="962.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.appvn.store_sale.controller.NhanVienController">
+    <stylesheets>
+        <URL value="@/com/appvn/store_sale/css/nhanvien.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="403.0" layoutY="14.0" text="Management Saler Page">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="253.0" layoutY="105.0" text="Tên Nhân Viên" />
+      <Label layoutX="265.0" layoutY="144.0" text="Ngày Sinh" />
+      <Label layoutX="269.0" layoutY="182.0" text="Giới Tính" />
+      <Label layoutX="254.0" layoutY="213.0" text="Ngày Vào Làm" />
+      <Label layoutX="271.0" layoutY="253.0" text="Chuc Vu" />
+      <Label layoutX="255.0" layoutY="295.0" text="Số Điện Thoại" />
+      <Label layoutX="273.0" layoutY="336.0" text="Địa Chỉ" />
+      <TextField fx:id="tfName" layoutX="373.0" layoutY="101.0" prefHeight="26.0" prefWidth="292.0" />
+      <DatePicker fx:id="tfNgaysinh" layoutX="374.0" layoutY="140.0" />
+      <RadioButton fx:id="rdnam" layoutX="370.0" layoutY="182.0" mnemonicParsing="false" text="Nam" />
+      <RadioButton fx:id="rdNu" layoutX="462.0" layoutY="182.0" mnemonicParsing="false" text="Nữ" />
+      <DatePicker fx:id="tfNgayvaolam" layoutX="374.0" layoutY="209.0" />
+      <TextField fx:id="tfChucvu" layoutX="373.0" layoutY="249.0" prefHeight="26.0" prefWidth="292.0" />
+      <TextField fx:id="tfSdt" layoutX="373.0" layoutY="291.0" prefHeight="26.0" prefWidth="292.0" />
+      <TextField fx:id="tfDiachi" layoutX="373.0" layoutY="332.0" prefHeight="26.0" prefWidth="292.0" />
+      <TableView fx:id="table" layoutX="14.0" layoutY="409.0" onMouseClicked="#MouseClick" prefHeight="149.0" prefWidth="984.0">
+        <columns>
+          <TableColumn fx:id="idColumn" prefWidth="75.0" text="Mã NV" />
+          <TableColumn fx:id="nameColumn" prefWidth="119.99999237060547" text="Tên NV" />
+            <TableColumn fx:id="birthColumn" prefWidth="143.99996948242188" text="Ngày Sinh" />
+            <TableColumn fx:id="sexCloumn" prefWidth="79.20001220703125" text="Giới Tính" />
+            <TableColumn fx:id="ngayvaolamColumn" prefWidth="140.80001831054688" text="Ngày Vào Làm" />
+            <TableColumn fx:id="chucvuColumn" prefWidth="128.800048828125" text="Chức Vụ" />
+            <TableColumn fx:id="sdtColumn" prefWidth="132.80010986328125" text="Số Điện Thoại" />
+            <TableColumn fx:id="diachiColumn" prefWidth="169.599853515625" text="Địa Chỉ" />
+        </columns>
+      </TableView>
+      <Button layoutX="317.0" layoutY="366.0" mnemonicParsing="false" onAction="#add" text="Add" />
+      <Button layoutX="414.0" layoutY="365.0" mnemonicParsing="false" onAction="#delete" prefHeight="26.0" prefWidth="48.0" text="Delete" />
+      <Button layoutX="617.0" layoutY="366.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="506.0" layoutY="365.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+   </children>
+</AnchorPane>

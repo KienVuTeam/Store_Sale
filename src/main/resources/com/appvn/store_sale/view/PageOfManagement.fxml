@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: ;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.appvn.store_sale.controller.PageOfManagementController">
+    <stylesheets>
+        <URL value="@/com/appvn/store_sale/css/pageofmanagement.css" />
+    </stylesheets>
+   <children>
+      <Label layoutX="242.0" layoutY="24.0" text="Page Of Management" />
+      <MenuBar layoutX="50.0" layoutY="63.0">
+        <menus>
+          <Menu mnemonicParsing="false" onAction="#phieuthu" text="Phiếu Thu">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Vào Trang" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" onAction="#phieuchi" text="Phiếu Chi">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Vào Trang" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
