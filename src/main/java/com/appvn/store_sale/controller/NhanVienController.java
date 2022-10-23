@@ -96,8 +96,8 @@ public class NhanVienController implements Initializable {
 //        nv.setIdNV(Integer.parseInt(tfId.getText()));
         nv.setNameNV(tfName.getText());
         nv.setNgaySinh(Date.valueOf(tfNgaysinh.getValue()));
-        nv.setGioiTinh(rdNu.getText());
-        nv.setGioiTinh(rdnam.getText());
+         nv.setGioiTinh(rdnam.isSelected()?"Nam":"Nữ");
+        
         nv.setNgayVaoLam(Date.valueOf(tfNgayvaolam.getValue()));
         nv.setChucVu(tfChucvu.getText());
         nv.setSDT(Integer.parseInt(tfSdt.getText()));

@@ -20,7 +20,7 @@ import javafx.collections.ObservableList;
 public class NhanVienDAO  {
     public int add(NhanVien nv){
         int result = 0;
-        String sql = "INSERT INTO NhanVien(name,GioiTinh,NgaySinh,ChucVu,NgayVaoLam,SDT,DiaChi) values(?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO NhanVien1(name,GioiTinh,NgaySinh,ChucVu,NgayVaoLam,SDT,DiaChi) values(?,?,?,?,?,?,?)";
       
         try {
             //b1r
@@ -53,7 +53,7 @@ public class NhanVienDAO  {
     public ObservableList<NhanVien> selectAll() {
         int result = 0;
         ObservableList<NhanVien> oblist = FXCollections.observableArrayList();
-        String sql = "Select id,name,NgaySinh,GioiTinh,NgayVaoLam,ChucVu,SDT,DiaChi from NhanVien";
+        String sql = "Select id,name,NgaySinh,GioiTinh,NgayVaoLam,ChucVu,SDT,DiaChi from NhanVien1";
        try {
             //b1
             Connection conn = Connect_SQLSRV_StoreSale.getConection();
@@ -81,7 +81,7 @@ public class NhanVienDAO  {
         int result = 0;
     ObservableList<NhanVien> oblist = FXCollections.observableArrayList();
 
-        String sql = "DELETE from NhanVien where id = ?";
+        String sql = "DELETE from NhanVien1 where id = ?";
 
         try {
             //b1
@@ -110,7 +110,7 @@ public class NhanVienDAO  {
      public ObservableList<NhanVien> refresh() {
         int result = 0;
         ObservableList<NhanVien> oblist = FXCollections.observableArrayList();
-        String sql = "Select * from NhanVien";
+        String sql = "Select * from NhanVien1";
        try {
             //b1
             Connection conn = Connect_SQLSRV_StoreSale.getConection();
