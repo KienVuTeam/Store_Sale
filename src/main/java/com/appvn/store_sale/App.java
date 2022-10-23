@@ -20,7 +20,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader load = new FXMLLoader(getClass().getResource(StringValue.HOME_PAGE));
         Parent p=load.load();
-        scene = new Scene(p, 650, 600);
+        scene = new Scene(p, 650, 500);
         stage.setScene(scene);
         stage.show();
     }

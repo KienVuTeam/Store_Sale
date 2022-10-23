@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="682.0" prefWidth="1010.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.appvn.store_sale.controller.Manager_storeHouseController">
+    <stylesheets>
+        <URL value="@/com/appvn/store_sale/css/manager_storehouse.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="13.0" prefHeight="657.0" prefWidth="262.0" style="-fx-background-color: #ccc;">
+         <children>
+            <Label alignment="CENTER" layoutX="46.0" layoutY="29.0" prefHeight="61.0" prefWidth="164.0" text="Bảng Menu " textFill="#dc9e22">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Label>
+            <Button layoutX="32.0" layoutY="108.0" mnemonicParsing="false" onAction="#atc_switch_store_house" prefHeight="55.0" prefWidth="200.0" text="Danh sách kho " />
+            <Button layoutX="32.0" layoutY="189.0" mnemonicParsing="false" onAction="#oat_manage_dvt" prefHeight="55.0" prefWidth="200.0" text="Tạo đơn vị tính " />
+            <Button layoutX="32.0" layoutY="268.0" mnemonicParsing="false" onAction="#oat_group_product" prefHeight="55.0" prefWidth="200.0" text="Quản lý nhóm sản phẩm " />
+            <Button layoutX="32.0" layoutY="353.0" mnemonicParsing="false" onAction="#oat_manage_product" prefHeight="55.0" prefWidth="200.0" text="Quản lý sản phẩm " />
+            <Button layoutX="32.0" layoutY="521.0" mnemonicParsing="false" onAction="#oat_manage_XNT_storeHouse" prefHeight="55.0" prefWidth="200.0" text="Quản lý kho " />
+            <Button layoutX="62.0" layoutY="599.0" mnemonicParsing="false" onAction="#atc_back" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: red;" text="Back " />
+            <Button layoutX="32.0" layoutY="436.0" mnemonicParsing="false" onAction="#oat_manage_sale_productPrice" prefHeight="55.0" prefWidth="200.0" text="Giảm giá sản phẩm " />
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="387.0" layoutY="31.0" prefHeight="49.0" prefWidth="512.0" text="Đây là Dashboard Manager StoreHouse ">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
