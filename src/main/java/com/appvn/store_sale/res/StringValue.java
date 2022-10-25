@@ -10,7 +10,8 @@ package com.appvn.store_sale.res;
  */
 public class StringValue {
     private static String view ="/com/appvn/store_sale/view/";
-    public static String HOME_PAGE=view+"NhanVien.fxml";
+    public static String HOME_PAGE=view+"HoaDon.fxml";
     public static String PHIEU_THU=view+"PhieuThu.fxml";
     public static String PHIEU_CHI=view+"PhieuChi.fxml";
+     public static String TAO_HOA_DON=view+"TaoHoaDon.fxml";
 }

@@ -24,7 +24,7 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader load = new FXMLLoader(getClass().getResource(StringValue.HOME_PAGE));
         Parent p=load.load();
-        scene = new Scene(p, 962, 558);
+        scene = new Scene(p, 1273, 773);
         
         stage.setScene(scene);
         stage.show();

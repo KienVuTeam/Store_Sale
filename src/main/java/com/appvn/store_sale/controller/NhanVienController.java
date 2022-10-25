@@ -96,8 +96,7 @@ public class NhanVienController implements Initializable {
 //        nv.setIdNV(Integer.parseInt(tfId.getText()));
         nv.setNameNV(tfName.getText());
         nv.setNgaySinh(Date.valueOf(tfNgaysinh.getValue()));
-         nv.setGioiTinh(rdnam.isSelected()?"Nam":"Nữ");
-        
+        nv.setGioiTinh(rdnam.isSelected() ? "Nam" : "Nữ");
         nv.setNgayVaoLam(Date.valueOf(tfNgayvaolam.getValue()));
         nv.setChucVu(tfChucvu.getText());
         nv.setSDT(Integer.parseInt(tfSdt.getText()));
@@ -111,15 +110,17 @@ public class NhanVienController implements Initializable {
         System.out.println("Khoaa thui trong controller: " + nv.getNgaySinh() + "Khoa ngoc: " + nv.getNgayVaoLam());
         NhanVienDAO dao = new NhanVienDAO();
         dao.add(nv);
-
+        act_show();
         tfName.clear();
         tfChucvu.clear();
-        
+        tfNgaysinh.setValue(null);
+        tfNgayvaolam.setValue(null);
         tfSdt.clear();
         tfDiachi.clear();
+        
     }
 
-    public void act_show(ActionEvent event) {
+    public void act_show() {
         NhanVienDAO dao = new NhanVienDAO();
         idColumn.setCellValueFactory(new PropertyValueFactory<>("idNV"));
         nameColumn.setCellValueFactory(new PropertyValueFactory<>("nameNV"));
@@ -133,17 +134,21 @@ public class NhanVienController implements Initializable {
         ObservableList<NhanVien> oblist = dao.selectAll();
         table.setItems(oblist);
     }
-    
-    public void MouseClick(){
-    NhanVien nv = (NhanVien) table.getSelectionModel().getSelectedItem();
-    tfName.setText(nv.getNameNV());
-    tfChucvu.setText(nv.getChucVu());
-//    tfNgaysinh.setT
-    tfDiachi.setText(nv.getDiaChi());
-    rdNu.setText(nv.getGioiTinh());
-    rdnam.setText(nv.getGioiTinh());
-    tfSdt.setText(Integer.toString(nv.getSDT()));
+
+    public void MouseClick() {
+        NhanVien nv = (NhanVien) table.getSelectionModel().getSelectedItem();
+        tfName.setText(nv.getNameNV());
+        tfChucvu.setText(nv.getChucVu());
+//    tfNgaysinh.setValue(Date.valueOf(nv.getNgaySinh()));
+        rdnam.setText(rdNu.isSelected() ? "Nam" :"Nữ");
+        tfDiachi.setText(nv.getDiaChi());
+        rdNu.setText(nv.getGioiTinh());
+        rdnam.setText(nv.getGioiTinh());
+        tfSdt.setText(Integer.toString(nv.getSDT()));
+        System.out.println("Gioi tính: " + nv.getGioiTinh());
     }
+    
+
     public void refresh(ActionEvent event) {
         NhanVienDAO dao = new NhanVienDAO();
         idColumn.setCellValueFactory(new PropertyValueFactory<>("idNV"));
@@ -158,7 +163,7 @@ public class NhanVienController implements Initializable {
         ObservableList<NhanVien> oblist = dao.refresh();
         table.setItems(oblist);
     }
-    
+
     @FXML
     void delete(ActionEvent event) throws Exception {
         Integer id;
