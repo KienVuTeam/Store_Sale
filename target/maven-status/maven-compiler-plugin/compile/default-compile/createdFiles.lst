@@ -1,10 +1,13 @@
 com\appvn\store_sale\controller\KhachHangController.class
+com\appvn\store_sale\dao\TaoHoaDonDAO.class
 com\appvn\store_sale\model\PhieuChi.class
+com\appvn\store_sale\model\SanPham1.class
 com\appvn\store_sale\model\HoaHong.class
 com\appvn\store_sale\controller\SanPhamController.class
 com\appvn\store_sale\res\StringValue.class
 com\appvn\store_sale\controller\ChietKhauController.class
 com\appvn\store_sale\controller\HomeController.class
+com\appvn\store_sale\controller\PageOfManagementController.class
 com\appvn\store_sale\model\SanPham.class
 com\appvn\store_sale\model\CongNo.class
 com\appvn\store_sale\controller\HoaDonController.class
@@ -14,6 +17,7 @@ com\appvn\store_sale\model\Luong.class
 com\appvn\store_sale\controller\UserController.class
 com\appvn\store_sale\model\ChietKhauThuongMai.class
 com\appvn\store_sale\controller\HoaHongController.class
+com\appvn\store_sale\dao\NhanVienDAO.class
 com\appvn\store_sale\model\KhachHang.class
 com\appvn\store_sale\model\NhanVien.class
 com\appvn\store_sale\controller\NhanVienController.class
@@ -24,6 +28,9 @@ com\appvn\store_sale\controller\PhieuThuController.class
 module-info.class
 com\appvn\store_sale\model\PhieuThu.class
 com\appvn\store_sale\controller\PhieuChiController.class
+com\appvn\store_sale\controller\TaoHoaDonController.class
+com\appvn\store_sale\dao\PhieuThuDAO.class
 com\appvn\store_sale\model\ChucVu.class
+com\appvn\store_sale\model\TaoHoaDon.class
+com\appvn\store_sale\dao\KhachHangDAO.class
 com\appvn\store_sale\model\NhomSanPham.class
-com\appvn\store_sale\model\HoaDon.class
