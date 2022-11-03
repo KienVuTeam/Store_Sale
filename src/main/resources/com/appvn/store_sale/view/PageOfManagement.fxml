@@ -1,36 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: ;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.appvn.store_sale.controller.PageOfManagementController">
+<AnchorPane id="AnchorPane" prefHeight="563.0" prefWidth="832.0" style="-fx-background-color: #E6F1D8;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.appvn.store_sale.controller.PageOfManagementController">
     <stylesheets>
         <URL value="@/com/appvn/store_sale/css/pageofmanagement.css" />
     </stylesheets>
    <children>
-      <Label layoutX="242.0" layoutY="24.0" text="Page Of Management" />
-      <MenuBar layoutX="50.0" layoutY="63.0">
-        <menus>
-          <Menu mnemonicParsing="false" onAction="#phieuthu" text="Phiếu Thu">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Vào Trang" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" onAction="#phieuchi" text="Phiếu Chi">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Vào Trang" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
-        </menus>
-      </MenuBar>
+      <Label layoutX="348.0" layoutY="34.0" text="Page Of Management" />
+      <Button layoutY="232.0" mnemonicParsing="false" onAction="#page_nhanvien" prefHeight="163.0" prefWidth="278.0" style="-fx-background-color: #FFE4B5;" text="Nhân viên">
+         <font>
+            <Font size="28.0" />
+         </font></Button>
+      <Button layoutX="562.0" layoutY="232.0" mnemonicParsing="false" onAction="#page_banhang" prefHeight="163.0" prefWidth="270.0" style="-fx-background-color: #E6E6FA;" text="Bán hàng">
+         <font>
+            <Font size="28.0" />
+         </font></Button>
+      <Button layoutX="275.0" layoutY="396.0" mnemonicParsing="false" onAction="#page_phieuthu" prefHeight="163.0" prefWidth="287.0" style="-fx-background-color: #C1FFC1;" text="Quản lí phiếu thu">
+         <font>
+            <Font size="28.0" />
+         </font></Button>
+      <Button layoutY="396.0" mnemonicParsing="false" onAction="#page_phieuchi" prefHeight="163.0" prefWidth="278.0" style="-fx-background-color: #B0E0E6;" text="Quản lí phiếu chi">
+         <font>
+            <Font size="28.0" />
+         </font></Button>
+      <Button layoutX="562.0" layoutY="396.0" mnemonicParsing="false" onAction="#page_thongke" prefHeight="163.0" prefWidth="270.0" style="-fx-background-color: #EE6AA7;" text="Thống kê">
+         <font>
+            <Font size="28.0" />
+         </font></Button>
+      <Label layoutX="390.0" layoutY="100.0" text="emart">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="275.0" layoutY="230.0" mnemonicParsing="false" prefHeight="163.0" prefWidth="287.0" text="Hoa hồng">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

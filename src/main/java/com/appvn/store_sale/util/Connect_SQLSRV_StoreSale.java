@@ -20,8 +20,8 @@ public class Connect_SQLSRV_StoreSale {
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
             //115.73.212.222,8888
-        String URL = "jdbc:sqlserver://115.73.212.222:8888;databaseName=thecoffee2;encrypt=true;trustServerCertificate=true;";
-        String username = "coffee2";
+        String URL = "jdbc:sqlserver://115.73.212.222:8888;databaseName=sem2_kien;encrypt=true;trustServerCertificate=true;";
+        String username = "kien";
         String password = "123";
         Connection conn = DriverManager.getConnection(URL, username, password);
 

@@ -25,25 +25,51 @@ public class PageOfManagementController implements Initializable {
     private Stage stage;
     private Scene scene;
 @FXML
-    public void phieuthu(ActionEvent event) throws IOException {
-         Stage stage = new Stage();
-        FXMLLoader l = new FXMLLoader(getClass().getResource(StringValue.PHIEU_THU));
-        Parent nhanvien_parent = l.load();
-        scene = new Scene(nhanvien_parent, 650, 500);
+    void page_banhang(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader l = new FXMLLoader(getClass().getResource(StringValue.HoaDon));
+        Parent nhanvien = l.load();
+        scene = new Scene(nhanvien, 1273, 783);
         stage.setScene(scene);
         stage.show();
-
     }
+
     @FXML
-    public void phieuchi(ActionEvent event) throws IOException {
-         Stage stage = new Stage();
+    void page_nhanvien(ActionEvent event) throws IOException {
+Stage stage = new Stage();
+        FXMLLoader l = new FXMLLoader(getClass().getResource(StringValue.NHAN_VIEN));
+        Parent nhanvien_parent = l.load();
+        scene = new Scene(nhanvien_parent, 962, 558);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    void page_phieuchi(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
         FXMLLoader l = new FXMLLoader(getClass().getResource(StringValue.PHIEU_CHI));
         Parent nhanvien_parent = l.load();
         scene = new Scene(nhanvien_parent, 650, 500);
         stage.setScene(scene);
         stage.show();
+    }
+
+    @FXML
+    void page_phieuthu(ActionEvent event) {
 
     }
+
+    @FXML
+    void page_thongke(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        FXMLLoader l = new FXMLLoader(getClass().getResource(StringValue.THONG_KE));
+        Parent nhanvien_parent = l.load();
+        scene = new Scene(nhanvien_parent, 774, 561);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

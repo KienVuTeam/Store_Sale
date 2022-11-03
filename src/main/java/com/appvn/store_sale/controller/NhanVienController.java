@@ -23,7 +23,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import com.appvn.store_sale.util.Connect_SQLSRV_StoreSale;
-
+import javafx.scene.input.MouseEvent;
 
 /**
  *
@@ -88,7 +88,7 @@ public class NhanVienController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-
+act_show();
     }
 
     public void add(ActionEvent e) {
@@ -110,14 +110,14 @@ public class NhanVienController implements Initializable {
         System.out.println("Khoaa thui trong controller: " + nv.getNgaySinh() + "Khoa ngoc: " + nv.getNgayVaoLam());
         NhanVienDAO dao = new NhanVienDAO();
         dao.add(nv);
-        act_show();
+        
         tfName.clear();
         tfChucvu.clear();
         tfNgaysinh.setValue(null);
         tfNgayvaolam.setValue(null);
         tfSdt.clear();
         tfDiachi.clear();
-        
+
     }
 
     public void act_show() {
@@ -140,14 +140,13 @@ public class NhanVienController implements Initializable {
         tfName.setText(nv.getNameNV());
         tfChucvu.setText(nv.getChucVu());
 //    tfNgaysinh.setValue(Date.valueOf(nv.getNgaySinh()));
-        rdnam.setText(rdNu.isSelected() ? "Nam" :"Nữ");
+        rdnam.setText(rdNu.isSelected() ? null : "Nữ");
         tfDiachi.setText(nv.getDiaChi());
         rdNu.setText(nv.getGioiTinh());
         rdnam.setText(nv.getGioiTinh());
         tfSdt.setText(Integer.toString(nv.getSDT()));
         System.out.println("Gioi tính: " + nv.getGioiTinh());
     }
-    
 
     public void refresh(ActionEvent event) {
         NhanVienDAO dao = new NhanVienDAO();

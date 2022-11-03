@@ -4,7 +4,7 @@
  */
 package com.appvn.store_sale.dao;
 
-import com.appvn.store_sale.model.NhanVien;
+
 import com.appvn.store_sale.model.TaoHoaDon;
 import com.appvn.store_sale.util.Connect_SQLSRV_StoreSale;
 import java.sql.Connection;
@@ -49,7 +49,7 @@ public class TaoHoaDonDAO {
     public ObservableList<TaoHoaDon> selectAll() {
 
         ObservableList<TaoHoaDon> oblist = FXCollections.observableArrayList();
-        String sql = "Select * from TaoHoaDon";
+        String sql = "SELECT TOP 1 * FROM TaoHoaDon ORDER BY id DESC";
         try {
             //b1
             Connection conn = Connect_SQLSRV_StoreSale.getConection();
@@ -58,8 +58,9 @@ public class TaoHoaDonDAO {
             ResultSet rs = pt.executeQuery();
             System.out.println("Cai loi ngu nay co chayj trong DAO ko?");
             while (rs.next()) {
-                oblist.add(new TaoHoaDon(rs.getDate("ngaytao"), rs.getInt("nhanvien"), rs.getString("khachhang")));
-                System.out.println("In id: "+rs.getInt("id")+ "in ngay:" + rs.getDate("ngaytao") +rs.getInt("nhanvien")+ rs.getString("khachhang"));
+                  oblist.add(new TaoHoaDon( rs.getDate("ngaytao"), rs.getInt("nhanvien"), rs.getString("khachhang"),rs.getInt("id")));
+            
+//                System.out.println("In id: "+rs.getInt("id")+ "in ngay:" + rs.getDate("ngaytao") +rs.getInt("nhanvien")+ rs.getString("khachhang"));
             }
             pt.close();
             rs.close();
@@ -83,7 +84,7 @@ public class TaoHoaDonDAO {
             ResultSet rs = pt.executeQuery();
 
             while (rs.next()) {
-                oblist.add(new TaoHoaDon(rs.getInt("id"), rs.getDate("ngaytao"), rs.getInt("nhanvien"), rs.getString("khachhang")));
+               oblist.add(new TaoHoaDon( rs.getDate("ngaytao"), rs.getInt("nhanvien"), rs.getString("khachhang"),rs.getInt("id")));
             }
             System.out.println("cau lenh ban dang dung: " + sql);
             System.out.println("so dong thay doi: " + result);

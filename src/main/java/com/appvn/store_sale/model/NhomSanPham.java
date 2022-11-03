@@ -13,14 +13,23 @@ public class NhomSanPham {
     private int id;
     private String name;
     private String loai;
+    private int dongiaban;
+    private int tonkho;        
     private int idSp;
 
-    public NhomSanPham(int id, String name, String loai, int idSp) {
+    public NhomSanPham() {
+    }
+
+    public NhomSanPham(int id, String name, String loai, int dongiaban, int tonkho, int idSp) {
         this.id = id;
         this.name = name;
         this.loai = loai;
+        this.dongiaban = dongiaban;
+        this.tonkho = tonkho;
         this.idSp = idSp;
     }
+
+    
 
     public int getId() {
         return id;
@@ -46,6 +55,22 @@ public class NhomSanPham {
         this.loai = loai;
     }
 
+    public int getDongiaban() {
+        return dongiaban;
+    }
+
+    public void setDongiaban(int dongiaban) {
+        this.dongiaban = dongiaban;
+    }
+
+    public int getTonkho() {
+        return tonkho;
+    }
+
+    public void setTonkho(int tonkho) {
+        this.tonkho = tonkho;
+    }
+
     public int getIdSp() {
         return idSp;
     }
@@ -53,6 +78,8 @@ public class NhomSanPham {
     public void setIdSp(int idSp) {
         this.idSp = idSp;
     }
+
+    
 
     
 }

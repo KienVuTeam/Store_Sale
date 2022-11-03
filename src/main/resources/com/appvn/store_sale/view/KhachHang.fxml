@@ -22,16 +22,16 @@
       <Label layoutX="79.0" layoutY="111.0" text="Tên Khách Hàng" />
       <Label layoutX="86.0" layoutY="147.0" text="Số Điện Thoại" />
       <Label layoutX="104.0" layoutY="182.0" text="Địa Chỉ" />
-      <TextField fx:id="tfname" layoutX="198.0" layoutY="107.0" prefHeight="26.0" prefWidth="230.0" />
+      <TextField fx:id="tfname1" layoutX="198.0" layoutY="107.0" prefHeight="26.0" prefWidth="230.0" />
       <TextField fx:id="tfsdt" layoutX="197.0" layoutY="143.0" prefHeight="26.0" prefWidth="230.0" />
-      <TextField fx:id="tfdiachi" layoutX="198.0" layoutY="178.0" prefHeight="26.0" prefWidth="230.0" />
+      <TextField fx:id="tfdiachi1" layoutX="198.0" layoutY="178.0" prefHeight="26.0" prefWidth="230.0" />
       <Button layoutX="160.0" layoutY="231.0" mnemonicParsing="false" onAction="#add" text="Thêm" />
       <Button layoutX="266.0" layoutY="231.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="46.0" text="Xoá " />
       <Button layoutX="364.0" layoutY="231.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="46.0" text="Sửa" />
-      <TableView layoutX="37.0" layoutY="270.0" prefHeight="200.0" prefWidth="542.0">
+      <TableView fx:id="bang3" layoutX="37.0" layoutY="270.0" prefHeight="200.0" prefWidth="542.0">
         <columns>
           <TableColumn fx:id="idColumn" prefWidth="105.60003662109375" text="Mã Khách Hàng" />
-          <TableColumn fx:id="nameColumn" prefWidth="147.199951171875" text="Tên Khách Hàng" />
+          <TableColumn fx:id="nameColumn2" prefWidth="147.199951171875" text="Tên Khách Hàng" />
             <TableColumn fx:id="sdtColumn" prefWidth="139.20001220703125" text="Số Điện Thoại" />
             <TableColumn fx:id="diachiColumn" prefWidth="150.39996337890625" text="Địa chỉ" />
         </columns>

@@ -18,16 +18,20 @@ public class TaoHoaDon {
     private Date day;
     private int nv;
     private String kh;
+    private int id1; 
     
     
     public TaoHoaDon() {
     }
 
-    public TaoHoaDon(Date day, int nv, String kh) {
+    public TaoHoaDon(Date day, int nv, String kh, int id1) {
         this.day = day;
         this.nv = nv;
         this.kh = kh;
+        this.id1 = id1;
     }
+
+    
 
     public Date getDay() {
         return day;
@@ -52,6 +56,16 @@ public class TaoHoaDon {
     public void setKh(String kh) {
         this.kh = kh;
     }
+
+    public int getId1() {
+        return id1;
+    }
+
+    public void setId1(int id1) {
+        this.id1 = id1;
+    }
+
+    
     
     
 

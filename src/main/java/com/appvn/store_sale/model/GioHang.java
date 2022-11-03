@@ -8,24 +8,22 @@ package com.appvn.store_sale.model;
  *
  * @author hoang
  */
-public class SanPham1 {
+public class GioHang {
     private int id;
-    private String name;
+       private String name;
+    private Float dongia;
     private int soluong;
-    private int dongia;
+    private Float thanhtien;
 
-    public SanPham1() {
+    public GioHang() {
     }
 
-    public SanPham1(int id, String name, int soluong, int dongia) {
+    public GioHang(int id, String name, Float dongia, int soluong, Float thanhtien) {
         this.id = id;
         this.name = name;
-        this.soluong = soluong;
         this.dongia = dongia;
-    }
-
-    public SanPham1(String string, int aInt, int aInt0) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.soluong = soluong;
+        this.thanhtien = thanhtien;
     }
 
     public int getId() {
@@ -44,6 +42,14 @@ public class SanPham1 {
         this.name = name;
     }
 
+    public Float getDongia() {
+        return dongia;
+    }
+
+    public void setDongia(Float dongia) {
+        this.dongia = dongia;
+    }
+
     public int getSoluong() {
         return soluong;
     }
@@ -52,12 +58,24 @@ public class SanPham1 {
         this.soluong = soluong;
     }
 
-    public int getDongia() {
-        return dongia;
+    public Float getThanhtien() {
+        return thanhtien;
     }
 
-    public void setDongia(int dongia) {
-        this.dongia = dongia;
+    public void setThanhtien(Float thanhtien) {
+        this.thanhtien = thanhtien;
     }
+
+    
+    
+
+    
+
+   
+
+   
+
+    
+   
     
 }

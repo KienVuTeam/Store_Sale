@@ -25,6 +25,8 @@ public class KhachHang {
         this.DiaChi = DiaChi;
     }
 
+    
+
     public int getIdKH() {
         return idKH;
     }

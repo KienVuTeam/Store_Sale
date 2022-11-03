@@ -18,8 +18,8 @@
       <ComboBox fx:id="cbNhanvientao" layoutX="225.0" layoutY="115.0" prefWidth="150.0" />
       <ComboBox fx:id="cbKhachhang" layoutX="224.0" layoutY="166.0" prefWidth="150.0" />
       <Button layoutX="141.0" layoutY="252.0" mnemonicParsing="false" onAction="#add" text="Add" />
-      <Button layoutX="385.0" layoutY="252.0" mnemonicParsing="false" onAction="#refresh" text="Button" />
+      <Button layoutX="349.0" layoutY="252.0" mnemonicParsing="false" onAction="#refresh" text="Button" />
       <DatePicker fx:id="dpNgaytao" layoutX="225.0" layoutY="57.0" />
-      <Button layoutX="287.0" layoutY="252.0" mnemonicParsing="false" onAction="#ngu" text="test" />
+      <Button layoutX="252.0" layoutY="252.0" mnemonicParsing="false" text="test" />
    </children>
 </AnchorPane>

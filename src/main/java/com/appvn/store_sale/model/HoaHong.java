@@ -11,14 +11,17 @@ package com.appvn.store_sale.model;
 public class HoaHong {
     private int id;
     int idnhanvien;
-    private int nhómpid;
-    int chietkhauthuongmaiid;
+    private int laphoadonid;
+    private int tiennhanduoc;
 
-    public HoaHong(int id, int idnhanvien, int nhómpid, int chietkhauthuongmaiid) {
+    public HoaHong() {
+    }
+
+    public HoaHong(int id, int idnhanvien, int laphoadonid, int tiennhanduoc) {
         this.id = id;
         this.idnhanvien = idnhanvien;
-        this.nhómpid = nhómpid;
-        this.chietkhauthuongmaiid = chietkhauthuongmaiid;
+        this.laphoadonid = laphoadonid;
+        this.tiennhanduoc = tiennhanduoc;
     }
 
     public int getId() {
@@ -37,20 +40,23 @@ public class HoaHong {
         this.idnhanvien = idnhanvien;
     }
 
-    public int getNhómpid() {
-        return nhómpid;
+    public int getLaphoadonid() {
+        return laphoadonid;
     }
 
-    public void setNhómpid(int nhómpid) {
-        this.nhómpid = nhómpid;
+    public void setLaphoadonid(int laphoadonid) {
+        this.laphoadonid = laphoadonid;
     }
 
-    public int getChietkhauthuongmaiid() {
-        return chietkhauthuongmaiid;
+    public int getTiennhanduoc() {
+        return tiennhanduoc;
     }
 
-    public void setChietkhauthuongmaiid(int chietkhauthuongmaiid) {
-        this.chietkhauthuongmaiid = chietkhauthuongmaiid;
+    public void setTiennhanduoc(int tiennhanduoc) {
+        this.tiennhanduoc = tiennhanduoc;
     }
+
     
+
+   
 }

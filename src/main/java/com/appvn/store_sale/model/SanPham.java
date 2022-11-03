@@ -12,22 +12,24 @@ public class SanPham {
 
     private int id;
     private String name;
-    private String LoaiSanPham;
-    private int GiaNhap;
-    private int GiaBan;
-    private String HangSanXuat;
-    private int TonKho;
+    private Float giabansi,giabanle,chietsuat;
+    private int tonkho;
+    private String donvi;
 
-    public SanPham(int id, String name, String LoaiSanPham, int GiaNhap, int GiaBan, String HangSanXuat, int TonKho) {
-        this.id = id;
-        this.name = name;
-        this.LoaiSanPham = LoaiSanPham;
-        this.GiaNhap = GiaNhap;
-        this.GiaBan = GiaBan;
-        this.HangSanXuat = HangSanXuat;
-        this.TonKho = TonKho;
+    public SanPham() {
     }
 
+    public SanPham(int id, String name, Float giabansi, Float giabanle, Float chietsuat, int tonkho, String donvi) {
+        this.id = id;
+        this.name = name;
+        this.giabansi = giabansi;
+        this.giabanle = giabanle;
+        this.chietsuat = chietsuat;
+        this.tonkho = tonkho;
+        this.donvi = donvi;
+    }
+
+    
     public int getId() {
         return id;
     }
@@ -44,45 +46,45 @@ public class SanPham {
         this.name = name;
     }
 
-    public String getLoaiSanPham() {
-        return LoaiSanPham;
+    public Float getGiabansi() {
+        return giabansi;
     }
 
-    public void setLoaiSanPham(String LoaiSanPham) {
-        this.LoaiSanPham = LoaiSanPham;
+    public void setGiabansi(Float giabansi) {
+        this.giabansi = giabansi;
     }
 
-    public int getGiaNhap() {
-        return GiaNhap;
+    public Float getGiabanle() {
+        return giabanle;
     }
 
-    public void setGiaNhap(int GiaNhap) {
-        this.GiaNhap = GiaNhap;
+    public void setGiabanle(Float giabanle) {
+        this.giabanle = giabanle;
     }
 
-    public int getGiaBan() {
-        return GiaBan;
+    public Float getChietsuat() {
+        return chietsuat;
     }
 
-    public void setGiaBan(int GiaBan) {
-        this.GiaBan = GiaBan;
+    public void setChietsuat(Float chietsuat) {
+        this.chietsuat = chietsuat;
     }
 
-    public String getHangSanXuat() {
-        return HangSanXuat;
+    public int getTonkho() {
+        return tonkho;
     }
 
-    public void setHangSanXuat(String HangSanXuat) {
-        this.HangSanXuat = HangSanXuat;
+    public void setTonkho(int tonkho) {
+        this.tonkho = tonkho;
     }
 
-    public int getTonKho() {
-        return TonKho;
+    public String getDonvi() {
+        return donvi;
     }
 
-    public void setTonKho(int TonKho) {
-        this.TonKho = TonKho;
+    public void setDonvi(String donvi) {
+        this.donvi = donvi;
     }
-    
+
 
 }

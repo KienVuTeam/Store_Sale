@@ -5,6 +5,7 @@
 package com.appvn.store_sale.controller;
 
 import com.appvn.store_sale.dao.TaoHoaDonDAO;
+import com.appvn.store_sale.model.GioHang;
 import com.appvn.store_sale.model.TaoHoaDon;
 import com.appvn.store_sale.util.Connect_SQLSRV_StoreSale;
 import java.net.URL;
@@ -20,9 +21,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
+
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
+
 
 /**
  * FXML Controller class
@@ -39,6 +40,9 @@ public class TaoHoaDonController implements Initializable {
 
     @FXML
     private DatePicker dpNgaytao;
+     @FXML
+    private TableView<TaoHoaDon> table_temp;
+    private ObservableList<TaoHoaDon> taohoadonList;
 //    @FXML
 //    private TableColumn<TaoHoaDon, String> khachhangColumn;
 
@@ -80,7 +84,7 @@ public class TaoHoaDonController implements Initializable {
 
     public int ComboBox1() {
         ObservableList oblist = FXCollections.observableArrayList();
-        String sql = "select nameKh from Customer";
+        String sql = "select name from test";
 
         try {
             //b1r
@@ -90,7 +94,7 @@ public class TaoHoaDonController implements Initializable {
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                oblist.add(rs.getString("nameKh"));
+                oblist.add(rs.getString("name"));
             }
             cbKhachhang.setItems(oblist);
             rs.close();
@@ -102,8 +106,7 @@ public class TaoHoaDonController implements Initializable {
         }
         return 0;
     }
-    @FXML
-    private TableView<TaoHoaDon> table_temp;
+    
 
     @FXML
     void add(ActionEvent event) {
@@ -114,24 +117,13 @@ public class TaoHoaDonController implements Initializable {
         TaoHoaDonDAO dao = new TaoHoaDonDAO();
 //        System.out.println("trong controller get value 3: "+thd.getNgayTao()+thd.getKhachHang()+thd.getNgayTao());
         dao.add(thd);
-        cailoingu();
+//        taohoadonList.add(thd);
+        
+//        cailoingu();
 //        System.out.println("co chay trong controller ko");
     }
 
-    @FXML 
-    private TableColumn<TaoHoaDon,Date> col1;
-    private TableColumn<TaoHoaDon,Integer> col2;
-    private TableColumn<TaoHoaDon, String> col3;
-    public void cailoingu() {
-        TaoHoaDonDAO dao = new TaoHoaDonDAO();
-        ObservableList<TaoHoaDon> list = dao.selectAll();
-        System.out.println("in trong model controller: "+list);
-        col1.setCellValueFactory(new PropertyValueFactory<TaoHoaDon, Date>("NgayTao"));
-        col2.setCellValueFactory(new PropertyValueFactory<TaoHoaDon, Integer>("NhanVienTao"));
-        col3.setCellValueFactory(new PropertyValueFactory<TaoHoaDon, String>("KhachHang"));
-
-        table_temp.setItems(list);
-    }
+   
 
     public void refresh(ActionEvent event) {
 //        TaoHoaDonDAO dao = new TaoHoaDonDAO();
@@ -148,7 +140,8 @@ public class TaoHoaDonController implements Initializable {
         // TODO
         ComboBox();
         ComboBox1();
-       cailoingu();
+       
+       
     }
 
 }
