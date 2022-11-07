@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane prefHeight="666.0" prefWidth="1052.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.appvn.store_sale.controller.DoanhThuController">
+   <tabs>
+      <Tab text="dashboard/hoahong">
+         <content>
+            <AnchorPane id="AnchorPane" prefHeight="658.0" prefWidth="893.0" styleClass="mainFxmlClass">
+                <stylesheets>
+                    <URL value="@/com/appvn/store_sale/css/doanhthu.css" />
+                </stylesheets>
+               <children>
+                  <TableView fx:id="table" layoutX="54.0" layoutY="15.0" onMouseClicked="#mouse1" prefHeight="174.0" prefWidth="664.0">
+                    <columns>
+                      <TableColumn fx:id="maColumn" prefWidth="173.60000038146973" text="Mã hoá đơn" />
+                      <TableColumn fx:id="maColumn1" prefWidth="214.4000244140625" text="Mã nhân viên" />
+                        <TableColumn fx:id="tienColumn1" prefWidth="279.2000427246094" text="Tổng tiền" />
+                    </columns>
+                  </TableView>
+                  <Label fx:id="lbhoadon" layoutX="770.0" layoutY="34.0" />
+                  <Label fx:id="lbnhanvien" layoutX="770.0" layoutY="85.0" />
+                  <Label fx:id="lbtien" layoutX="770.0" layoutY="134.0" />
+                  <Button layoutX="758.0" layoutY="179.0" mnemonicParsing="false" onAction="#add" text="Thêm vào" />
+                  <TableView fx:id="table1" layoutX="53.0" layoutY="226.0" prefHeight="200.0" prefWidth="664.0">
+                    <columns>
+                      <TableColumn fx:id="maColumn2" prefWidth="182.39998626708984" text="Mã hoá đơn" />
+                      <TableColumn fx:id="maColumn3" prefWidth="250.4000244140625" text="Mã nhân viên" />
+                        <TableColumn fx:id="tienColumn2" prefWidth="232.00009155273438" text="Tiền hoa hồng nhận được" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="table2" layoutX="104.0" layoutY="445.0" prefHeight="152.0" prefWidth="562.0">
+                    <columns>
+                      <TableColumn fx:id="maColumn5" prefWidth="229.5999984741211" text="Mã nhân viên" />
+                      <TableColumn fx:id="tienColumn5" prefWidth="332.0000305175781" text="Tổng kết tiền hoa hồng" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

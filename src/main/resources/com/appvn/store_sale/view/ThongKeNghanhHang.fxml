@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<TabPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.appvn.store_sale.controller.ThongKeNghanhHangController">
+   <tabs>
+      <Tab>
+         <content>
+            <AnchorPane id="AnchorPane" prefHeight="574.0" prefWidth="822.0" styleClass="mainFxmlClass">
+                <stylesheets>
+                    <URL value="@/com/appvn/store_sale/css/thongkenghanhhang.css" />
+                </stylesheets>
+               <children>
+                  <TabPane prefHeight="574.0" prefWidth="822.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Thống kê nghành hàng">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="538.0" prefWidth="822.0">
+                                 <children>
+                                    <TableView fx:id="table" layoutX="68.0" layoutY="128.0" prefHeight="350.0" prefWidth="646.0">
+                                      <columns>
+                                        <TableColumn fx:id="macolumn" prefWidth="190.40000915527344" text="Tên sản phẩm" />
+                                          <TableColumn fx:id="ngaycolumn" prefWidth="228.79998779296875" text="Ngày" />
+                                          <TableColumn fx:id="tongcolunm" prefWidth="227.2000732421875" text="Tổng sản phẩm" />
+                                      </columns>
+                                    </TableView>
+                                    <DatePicker fx:id="startdate" layoutX="84.0" layoutY="60.0" />
+                                    <DatePicker fx:id="finishdate" layoutX="323.0" layoutY="60.0" />
+                                    <Label layoutX="84.0" layoutY="30.0" text="Label" />
+                                    <Label layoutX="333.0" layoutY="30.0" text="Label" />
+                                    <Button layoutX="541.0" layoutY="60.0" mnemonicParsing="false" onAction="#timkiem" text="Button" />
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

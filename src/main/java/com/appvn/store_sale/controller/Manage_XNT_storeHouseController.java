@@ -32,14 +32,14 @@ public class Manage_XNT_storeHouseController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    @FXML
-    void oat_back(ActionEvent e) throws IOException {
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        FXMLLoader load = new FXMLLoader(getClass().getResource(StringValue.MANAGER_STORE_HOUSE));
-        Parent layout = load.load();
-        scene = new Scene(layout, 1000, 700);
-        stage.setScene(scene);
-        stage.show();
-    }
+//    @FXML
+//    void oat_back(ActionEvent e) throws IOException {
+//        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+//        FXMLLoader load = new FXMLLoader(getClass().getResource(StringValue.MANAGER_STORE_HOUSE));
+//        Parent layout = load.load();
+//        scene = new Scene(layout, 1000, 700);
+//        stage.setScene(scene);
+//        stage.show();
+//    }
     
 }

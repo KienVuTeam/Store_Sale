@@ -87,16 +87,15 @@ public class Manage_dvtController implements Initializable {
         init_tb_dvt();
     }
 
-    @FXML
-    void oat_back(ActionEvent e) throws IOException {
-        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
-        FXMLLoader load = new FXMLLoader(getClass().getResource(StringValue.MANAGER_STORE_HOUSE));
-        Parent p = load.load();
-        scene = new Scene(p, 1000, 700);
-        stage.setScene(scene);
-        stage.show();
-    }
-
+//    @FXML
+//    void oat_back(ActionEvent e) throws IOException {
+//        Stage stage = (Stage) ((Node) e.getSource()).getScene().getWindow();
+//        FXMLLoader load = new FXMLLoader(getClass().getResource(StringValue.MANAGER_STORE_HOUSE));
+//        Parent p = load.load();
+//        scene = new Scene(p, 1000, 700);
+//        stage.setScene(scene);
+//        stage.show();
+//    }
     public void init() {
         Manage_dvt_DAO dao = new Manage_dvt_DAO();
         col_unitname_primitive.setCellValueFactory(new PropertyValueFactory<Manage_dvt, String>("unit_name"));
@@ -106,11 +105,21 @@ public class Manage_dvtController implements Initializable {
     }
 
     @FXML
-    void showOnClick1(MouseEvent e) {
-        Manage_dvt mu = new Manage_dvt();
-        mu = (Manage_dvt) tbl_unit.getSelectionModel().getSelectedItem();
-        iptf_unitma.setText(mu.getId_unit());
-        iptf_unitname.setText(mu.getUnit_name());
+    void showOnClick1(MouseEvent event) throws Exception {
+
+//        muclick =null;
+        try {
+            Manage_dvt muclick = new Manage_dvt();
+//            if (muclick != null) {
+            muclick = (Manage_dvt) tbl_unit.getSelectionModel().getSelectedItem();
+            iptf_unitma.setText(muclick.getId_unit());
+            iptf_unitname.setText(muclick.getUnit_name());
+//            } else {
+//                System.out.println("null");
+//            }
+        } catch (Exception e) {
+        }
+
     }
 
     @FXML
@@ -140,14 +149,14 @@ public class Manage_dvtController implements Initializable {
         try {
             //        Manage_dvt_DAO dao = new Manage_dvt_DAO();
 //            String sql = "SELECT DISTINCT unit_exchange. FROM unit_exchange";
-            String sql = "SELECT ex.unitname_exchange, ex.value_exchange, ex.id_unit, u.unit_name"
-                    + " FROM unit_exchange as ex FULL JOIN unit as u ON ex.id_unit = u.id_unit";
+            String sql = " select x.unitname_exchange, x.value_exchange, y.unit_name from unit_exchange as x, unit as y  "
+                    + "where x.id_unit =y.id_unit";
 //                    + "ORDER BY Khachhang.Hoten";
             Connection conn = Connect_SQLSRV_StoreSale.getConection();
             PreparedStatement pst = conn.prepareStatement(sql);
             ResultSet rs = pst.executeQuery();
             while (rs.next()) {
-                list_dvt.add(new Manage_dvt(rs.getString("unit_name"), rs.getString("unitname_exchange"), rs.getFloat("value_exchange")) );//Chua code xong
+                list_dvt.add(new Manage_dvt(rs.getString("unit_name"), rs.getString("unitname_exchange"), rs.getFloat("value_exchange")));//Chua code xong
             }
         } catch (Exception ex) {
             Logger.getLogger(Manage_dvtController.class.getName()).log(Level.SEVERE, null, ex);

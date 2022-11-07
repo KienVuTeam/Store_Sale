@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<TabPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.appvn.store_sale.controller.ThongKeKhachHangController">
+   <tabs>
+      <Tab>
+         <content>
+            <AnchorPane id="AnchorPane" prefHeight="574.0" prefWidth="778.0" style="-fx-background-color: #EEE9BF;" styleClass="mainFxmlClass">
+                <stylesheets>
+                    <URL value="@/com/appvn/store_sale/css/thongkekhachhang.css" />
+                </stylesheets>
+               <children>
+                  <TabPane layoutY="41.0" prefHeight="530.0" prefWidth="778.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Thống kê khách hàng">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="495.0" prefWidth="762.0" style="-fx-background-color: #CAE1FF;">
+                                 <children>
+                                    <DatePicker fx:id="startdate" layoutX="95.0" layoutY="106.0" />
+                                    <DatePicker fx:id="finishdate" layoutX="332.0" layoutY="106.0" />
+                                    <Label layoutX="95.0" layoutY="72.0" text="Ngày bắt đầu" />
+                                    <Label layoutX="331.0" layoutY="72.0" text="Ngày kết thúc" />
+                                    <Button id="line" layoutX="564.0" layoutY="106.0" mnemonicParsing="false" onAction="#timkiem" prefHeight="26.0" prefWidth="58.0" stylesheets="@../css/stylesheet.css" text="Tìm" />
+                                    <TableView fx:id="table" layoutX="87.0" layoutY="180.0" prefHeight="239.0" prefWidth="562.0">
+                                      <columns>
+                                        <TableColumn fx:id="maColumn" prefWidth="150.39997100830078" text="Mã khách hàng" />
+                                        <TableColumn fx:id="dateColumn" prefWidth="200.800048828125" text="Ngày mua hàng" />
+                                          <TableColumn fx:id="tongColumn" prefWidth="209.59994506835938" text="Tổng hoá đơn khách hàng đã mua" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+                  <Button layoutX="22.0" layoutY="5.0" mnemonicParsing="false" onAction="#back2" prefHeight="32.0" prefWidth="58.0" style="-fx-background-color: #FFAEB9;" text="Back" textOverrun="CLIP" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

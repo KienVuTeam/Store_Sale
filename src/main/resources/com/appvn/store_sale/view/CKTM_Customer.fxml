@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.appvn.store_sale.controller.CKTM_CustomerController">
+  <tabs>
+    <Tab text="chiết khấu thương mại">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane id="AnchorPane" prefHeight="635.0" prefWidth="860.0" styleClass="mainFxmlClass">
+                     <stylesheets>
+                        <URL value="@/com/appvn/store_sale/css/cktm_customer.css" />
+                     </stylesheets>
+                     <children>
+                        <BorderPane prefHeight="635.0" prefWidth="860.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <bottom>
+                              <Pane prefHeight="202.0" prefWidth="860.0" style="-fx-background-color: ffff99;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <TableView id="sale" fx:id="tbl_CKTM" layoutX="172.0" prefHeight="179.0" prefWidth="763.0">
+                                       <columns>
+                                          <TableColumn fx:id="name_CKTM_column" prefWidth="119.199951171875" text="Tên chương trình " />
+                                          <TableColumn fx:id="chietkhuau_column" prefWidth="130.39993286132812" text="chiết khuấu(%)" />
+                                          <TableColumn fx:id="startDay_column" minWidth="4.7999267578125" prefWidth="165.5999755859375" text="ngày bắt đầu" />
+                                          <TableColumn fx:id="endDay_column" minWidth="6.4000244140625" prefWidth="155.20004272460938" text="ngày kết thúc" />
+                                          <TableColumn fx:id="mota_column" prefWidth="194.39996337890625" text="mô tả" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </Pane>
+                           </bottom>
+                           <right>
+                              <Pane prefHeight="359.0" prefWidth="612.0" style="-fx-background-color: ffff99;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label layoutX="27.0" layoutY="44.0" text="thời gian sử dụng">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <DatePicker id="sale" fx:id="ngayBD_text" layoutX="117.0" layoutY="97.0" promptText="nhập ngày bd" />
+                                    <DatePicker id="sale" fx:id="ngayKT_text" layoutX="117.0" layoutY="157.0" promptText="nhập ngày kt" />
+                                    <Label layoutX="27.0" layoutY="101.0" text="ngày bắt đầu" />
+                                    <Label layoutX="26.0" layoutY="161.0" text="ngày kết thúc" />
+                                    <TextArea id="sale" fx:id="mota_text" layoutX="117.0" layoutY="221.0" prefHeight="73.0" prefWidth="200.0" />
+                                    <Label layoutX="46.0" layoutY="221.0" text="mô tả" />
+                                 </children>
+                              </Pane>
+                           </right>
+                           <left>
+                              <Pane prefHeight="352.0" prefWidth="543.0" style="-fx-background-color: ffff99;" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label layoutX="41.0" layoutY="42.0" text="chương trình khuyến mãi">
+                                       <font>
+                                          <Font name="Arial Black" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="sale" fx:id="chietkhuau_text" layoutX="120.0" layoutY="167.0" prefHeight="25.0" prefWidth="295.0" />
+                                    <TextField id="sale" fx:id="name_CKTM_text" layoutX="120.0" layoutY="102.0" prefHeight="25.0" prefWidth="295.0" />
+                                    <Label layoutX="20.0" layoutY="106.0" text="tên chương trình" />
+                                    <Label layoutX="28.0" layoutY="171.0" text="mức giảm giá" />
+                                    <Pane layoutX="50.0" layoutY="238.0" prefHeight="47.0" prefWidth="349.0" style="-fx-background-color: ffff9999;">
+                                       <children>
+                                          <Button id="sale" layoutX="29.0" layoutY="11.0" mnemonicParsing="false" onAction="#Add_CKTM" styleClass="mainFxmlClass" stylesheets="@../css/cktm_customer.css" text="thêm" />
+                                          <Button id="sale" layoutX="109.0" layoutY="11.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@../css/cktm_customer.css" text="sửa" />
+                                          <Button id="sale" layoutX="184.0" layoutY="11.0" mnemonicParsing="false" onAction="#Delete_CKTM" styleClass="mainFxmlClass" stylesheets="@../css/cktm_customer.css" text="xóa" />
+                                          <Button id="sale" layoutX="255.0" layoutY="11.0" mnemonicParsing="false" styleClass="mainFxmlClass" stylesheets="@../css/cktm_customer.css" text="làm mới" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </left>
+                           <top>
+                              <Pane prefHeight="74.0" prefWidth="860.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="74.0" prefWidth="1100.0" style="-fx-background-color: ffff99;" text="chiết khuấu thương mại">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </top>
+                        </BorderPane>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

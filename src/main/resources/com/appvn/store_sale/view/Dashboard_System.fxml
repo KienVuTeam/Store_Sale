@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="982.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.appvn.store_sale.controller.Dashboard_layoutMasterController">
+   <left>
+      <AnchorPane prefHeight="597.0" prefWidth="245.0" style="-fx-background-color: #ccc;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="TOP" layoutX="3.0" layoutY="14.0" prefHeight="83.0" prefWidth="251.0" text="DASHBOARD">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icon_system/dashboard.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Label>
+            <MenuBar layoutX="18.0" layoutY="263.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="217.0" scaleZ="6.0" translateX="-4.0" translateY="2.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Manage House Store">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#oat_MIswitch_storeHouse" text="Store House">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/inventory.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#oat_switch_manageUnit" text="Manage Unit">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/cost.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#oat_switch_manage_groupProduct" text="Group Product">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/hierarchical-structure.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#oat_switch_product" text="Product">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/delivery-box.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#oat_switch_manageSale" text="Manage Sale">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/coupon.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <Menu mnemonicParsing="false" text="XNT KHO">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#oat_switch_ton" text="Tồn Kho" />
+                              <MenuItem mnemonicParsing="false" onAction="#oat_switch_nhap" text="Nhập Kho " />
+                              <MenuItem mnemonicParsing="false" onAction="#oat_switch_xuat" text="Xuất Kho" />
+                          </items>
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/inventory-management.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Menu>
+                  </items>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asset/icon_system/programmer.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                </Menu>
+              </menus>
+               <opaqueInsets>
+                  <Insets top="1.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="9.0" left="14.0" right="20.0" top="4.0" />
+               </padding>
+            </MenuBar>
+            <Button layoutX="9.0" layoutY="153.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#oat_switch_manageAccount" prefHeight="74.0" prefWidth="226.0" text="Manage Account">
+               <graphic>
+                  <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icon_system/manager.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="45.0" />
+               </padding></Button>
+            <MenuBar layoutX="14.0" layoutY="363.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="217.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Manage House Store">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#load_customer" text="Store House">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/inventory.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#load_CKTM" text="Manage Unit">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/cost.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#load_qlhoadon" text="Group Product">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/hierarchical-structure.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#load_hoadon" text="Product">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/delivery-box.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asset/icon_system/programmer.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+               </menus>
+               <opaqueInsets>
+                  <Insets top="1.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="9.0" left="14.0" right="20.0" top="4.0" />
+               </padding>
+            </MenuBar>
+            <MenuBar layoutX="13.0" layoutY="447.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="217.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="Manege House Store">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#load_page" text="MoneyDonate">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/inventory.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#page_phieuthu" text="Reciepts">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/cost.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#page_banhang" text="Sales Statistics ">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/hierarchical-structure.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#page_khachhang" text="Customer Statistics">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/delivery-box.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#page_nghanhang" text="Industry Statistics">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icon_system/delivery-box.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                     </items>
+                     <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asset/icon_system/programmer.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
+               </menus>
+               <opaqueInsets>
+                  <Insets top="1.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="9.0" left="14.0" right="20.0" top="4.0" />
+               </padding>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </left>
+   <bottom>
+      <Label alignment="CENTER" disable="true" prefHeight="43.0" prefWidth="478.0" text="Coppy right Nhóm Kiên Vũ" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </bottom>
+   <center>
+      <ScrollPane fx:id="sp_layout" prefHeight="566.0" prefWidth="738.0" BorderPane.alignment="CENTER">
+         <content>
+            <AnchorPane fx:id="ap_after_sp" prefHeight="0.0" prefWidth="1500.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="118.0" layoutY="37.0" prefHeight="134.0" prefWidth="222.0" text="Home">
+                     <font>
+                        <Font size="66.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+   </center>
+   <top>
+      <MenuBar prefHeight="35.0" prefWidth="982.0" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Tài khoản ">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#oat_logout" text="Logout">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asset/icon_system/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic></MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#oat_exitSys" text="Exit">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asset/icon_system/button.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuItem>
+            </items>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icon_system/user.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help ">
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icon_system/information1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

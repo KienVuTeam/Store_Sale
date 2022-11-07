@@ -1,0 +1,14 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+     #m_system > .label{
+          /*../com/appvn/store_sale/asset/icon_system/home-page.png*/
+        -fx-graphic:url(/com/appvn/store_sale/asset/icon_system/home-page.png);
+     }
+    .button{
+        /*-fx-background-color: red;*/
+        -fx-font-size: 10px;  
+    }
+}

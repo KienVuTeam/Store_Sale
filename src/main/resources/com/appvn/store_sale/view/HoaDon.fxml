@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/18" fx:controller="com.appvn.store_sale.controller.HoaDonController">
+  <tabs>
+    <Tab text="Untitled Tab 1">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1200.0" styleClass="mainFxmlClass">
+                     <stylesheets>
+                        <URL value="@/com/appvn/store_sale/css/hoadon.css" />
+                     </stylesheets>
+                     <children>
+                        <AnchorPane id="AnchorPane" prefHeight="748.0" prefWidth="1201.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <BorderPane layoutX="1.0" layoutY="6.0" prefHeight="750.0" prefWidth="1200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <left>
+                                    <Pane prefHeight="750.0" prefWidth="750.0" style="-fx-background-color: ffff99;">
+                                       <children>
+                                          <TableView id="sale" fx:id="tbl_bill" layoutX="33.0" layoutY="266.0" prefHeight="158.0" prefWidth="572.0">
+                                             <columns>
+                                                <TableColumn fx:id="col_sp" prefWidth="152.79998779296875" text="Tên sản phẩm" />
+                                                <TableColumn fx:id="col_gia" prefWidth="166.39999389648438" text="Đơn giá" />
+                                                <TableColumn fx:id="col_soluong" prefWidth="120.0" text="Số lượng" />
+                                                <TableColumn fx:id="col_tongtien" prefWidth="130.4000244140625" text="Tổng tiền" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView id="sale" fx:id="tbl_sanpham" layoutX="42.0" layoutY="522.0" onMouseClicked="#laydulieu" prefHeight="200.0" prefWidth="578.0">
+                                             <columns>
+                                                <TableColumn fx:id="col_masp" prefWidth="96.79998397827148" text="Mã sản phẩm" />
+                                                <TableColumn fx:id="col_tensp" prefWidth="175.99998474121094" text="Tên sản phẩm" />
+                                                <TableColumn fx:id="col_giasp" minWidth="0.0" prefWidth="148.79998779296875" text="Đơn giá" />
+                                                <TableColumn fx:id="col_tonkho" prefWidth="152.79998779296875" text="Tồn Kho" />
+                                             </columns>
+                                          </TableView>
+                                          <TableView id="sale" fx:id="tbl_hoadoncho" layoutX="26.0" layoutY="38.0" onMouseClicked="#clicked1" prefHeight="174.0" prefWidth="578.0">
+                                             <columns>
+                                                <TableColumn fx:id="mahd_column" prefWidth="97.60000228881836" text="Mã hóa đơn" />
+                                                <TableColumn fx:id="makh_col" prefWidth="109.5999755859375" text="Mã KH" />
+                                                <TableColumn fx:id="namkh_col" prefWidth="119.20002746582031" text="Tên khách hàng" />
+                                                <TableColumn fx:id="ngaytao" prefWidth="123.20001220703125" text="ngày tạo" />
+                                                <TableColumn fx:id="namenv_col" minWidth="8.0" prefWidth="124.0" text="nhân viên tạo" />
+                                             </columns>
+                                          </TableView>
+                                          <Label layoutX="32.0" layoutY="14.0" text="Hoá đơn chờ" />
+                                          <Label layoutX="42.0" layoutY="242.0" text="Giỏ hàng" />
+                                          <Label layoutX="49.0" layoutY="433.0" text="Danh sách sản phẩm" />
+                                          <Label layoutX="49.0" layoutY="450.0" text="Tìm kiếm sản phẩm" />
+                                          <TextField id="sale" layoutX="49.0" layoutY="473.0" prefHeight="26.0" prefWidth="188.0" />
+                                          <Button id="sale" layoutX="487.0" layoutY="472.0" mnemonicParsing="false" onAction="#add_sp" styleClass="mainFxmlClass" stylesheets="@../css/hoadon.css" text="Thêm sản phẩm" />
+                                          <Button id="sale" layoutX="616.0" layoutY="308.0" mnemonicParsing="false" onAction="#delete_all" prefHeight="26.0" prefWidth="91.0" styleClass="mainFxmlClass" stylesheets="@../css/hoadon.css" text="Xoá tất cả" />
+                                          <TextField id="sale" fx:id="soluong_text" layoutX="291.0" layoutY="473.0" promptText="nhap so luong" />
+                                          <Label fx:id="lb_soluong" layoutX="296.0" layoutY="499.0" textFill="RED" />
+                                       </children>
+                                       <BorderPane.margin>
+                                          <Insets />
+                                       </BorderPane.margin>
+                                    </Pane>
+                                 </left>
+                                 <right>
+                                    <Pane prefHeight="750.0" prefWidth="450.0" style="-fx-background-color: ccffff;" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <Label layoutX="72.0" layoutY="42.0" text="Mã khách hàng" />
+                                          <Label layoutX="72.0" layoutY="86.0" text="Tên khách hàng" />
+                                          <Label fx:id="lb_makh" layoutX="214.0" layoutY="42.0" text="Label" />
+                                          <Label fx:id="lb_namekh" layoutX="216.0" layoutY="86.0" text="Label" />
+                                          <Button id="sale" layoutX="317.0" layoutY="36.0" mnemonicParsing="false" onAction="#page_khachhang" prefHeight="29.0" prefWidth="101.0" styleClass="mainFxmlClass" stylesheets="@../css/hoadon.css" text="Chọn" />
+                                          <Button id="sale" layoutX="317.0" layoutY="79.0" mnemonicParsing="false" onAction="#load_hoadoncho" prefHeight="31.0" prefWidth="100.0" styleClass="mainFxmlClass" stylesheets="@../css/hoadon.css" text="Thay đổi" />
+                                          <Label layoutX="75.0" layoutY="132.0" text="Mã hoá đơn" />
+                                          <Label layoutX="75.0" layoutY="181.0" text="Tổng tiền" />
+                                          <Label layoutX="75.0" layoutY="208.0" text="Thanh toán" />
+                                          <Label layoutX="72.0" layoutY="266.0" text="Tiền khách đưa" />
+                                          <Label layoutX="73.0" layoutY="323.0" text="Tiền thừa trả khách" />
+                                          <Label fx:id="lb_mahd" layoutX="219.0" layoutY="132.0" text="Vui lòng tạo!" />
+                                          <Label fx:id="lbtongtien" layoutX="221.0" layoutY="182.0" text="Label" />
+                                          <Label layoutX="323.0" layoutY="208.0" text="VNĐ" />
+                                          <Label layoutX="323.0" layoutY="182.0" text="VNĐ" />
+                                          <Label layoutX="347.0" layoutY="266.0" text="VNĐ" />
+                                          <Label layoutX="348.0" layoutY="323.0" text="VNĐ" />
+                                          <TextField id="sale" fx:id="txtpay" layoutX="215.0" layoutY="262.0" prefHeight="26.0" prefWidth="116.0" />
+                                          <Button id="sale" fx:id="btn_taohoadon" layoutX="319.0" layoutY="124.0" mnemonicParsing="false" onAction="#page_taohoadon" prefHeight="31.0" prefWidth="96.0" styleClass="mainFxmlClass" stylesheets="@../css/hoadon.css" text="Tạo hoá đơn" />
+                                          <Button id="sale" layoutX="111.0" layoutY="446.0" mnemonicParsing="false" onAction="#huy" styleClass="mainFxmlClass" stylesheets="@../css/hoadon.css" text="Huỷ hoá đơn" />
+                                          <Button id="yellow" layoutX="68.0" layoutY="495.0" mnemonicParsing="false" onAction="#thanhtoan" prefHeight="57.0" prefWidth="177.0" styleClass="mainFxmlClass" stylesheets="@../css/hoadon.css" text="Thanh toán" />
+                                          <Button id="sale" layoutX="303.0" layoutY="448.0" mnemonicParsing="false" onAction="#reset" prefHeight="29.0" prefWidth="83.0" styleClass="mainFxmlClass" stylesheets="@../css/hoadon.css" text="Làm mới" />
+                                          <Button id="but" layoutX="279.0" layoutY="497.0" mnemonicParsing="false" onAction="#chuathanhtoan" prefHeight="45.0" prefWidth="144.0" styleClass="mainFxmlClass" stylesheets="@../css/hoadon.css" text="Chưa thanh toán" />
+                                          <TextField id="sale" fx:id="txtthua" layoutX="213.0" layoutY="318.0" prefHeight="26.0" prefWidth="116.0" />
+                                          <Label fx:id="lbloipay" layoutX="215.0" layoutY="288.0" textFill="RED" />
+                                          <Label fx:id="lbloithua" layoutX="221.0" layoutY="208.0" text="Label" />
+                                       </children>
+                                    </Pane>
+                                 </right>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
